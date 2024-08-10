@@ -13,11 +13,11 @@ public class SpawnController : MonoBehaviour
     {
         if (!isSpawn)
         {
-            StartCoroutine(SpawnRoutine());
+            StartCoroutine(SpawnR());
         }
     }
 
-    private IEnumerator SpawnRoutine()
+    private IEnumerator SpawnR()
     {
         isSpawn = true; 
 

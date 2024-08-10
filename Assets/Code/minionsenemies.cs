@@ -14,7 +14,7 @@ public class minionsenemies : MonoBehaviour
     void Start()
     {
         direction = Vector2.right;
-        moveD= direction * speed;
+        moveD = direction * speed;
     }
 
     void Update()
