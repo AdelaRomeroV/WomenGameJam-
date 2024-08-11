@@ -12,6 +12,8 @@ public class QuitarSaludPrueba : MonoBehaviour
         {
             collision.gameObject.GetComponent<SaludJugador>().TakingDamage(damage);
         }
+
     }
+
 
 }
