@@ -126,8 +126,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1620745814557930475}
   - component: {fileID: 2343106868406717649}
-  - component: {fileID: 3777665751499205105}
   - component: {fileID: 7879427235928379308}
+  - component: {fileID: 4164153872102476712}
   m_Layer: 6
   m_Name: enemy  (NIVEL 2)
   m_TagString: Untagged
@@ -203,7 +203,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3777665751499205105
+--- !u!114 &7879427235928379308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492286798695910573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2843eaf9476f0924f9b243a8961d3159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedE: 25
+  range: 3.42
+  movementArea: {fileID: 0}
+  movSprite: {fileID: 0}
+--- !u!61 &4164153872102476712
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,24 +262,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &7879427235928379308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492286798695910573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2843eaf9476f0924f9b243a8961d3159, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedE: 25
-  range: 3.42
-  movementArea: {fileID: 0}
-  movSprite: {fileID: 0}
 --- !u!1 &7228603102823898110
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class MovRandowEnemy : MonoBehaviour
     public GameObject movementArea;
 
     private Vector2 wayPoint;
-    public BoxCollider2D movSprite;
+    public Collider2D movSprite;
 
     void Start()
     {
