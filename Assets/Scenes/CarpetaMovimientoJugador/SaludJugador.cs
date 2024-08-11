@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SaludJugador : MonoBehaviour
 {
+
     [SerializeField] private float life; //Salud del jugador, en este caso 30.
     private float maxLife;
     private Renderer objectRenderer; 
     [SerializeField] private Color fullLifeColor = Color.white; //Color que tiene el objeto cuando su vida esta al maximo, en este caso blanco (white)
     [SerializeField] private Color lowLifeColor = Color.black; // Color cuando la vida es baja, en este caso negro (black)
+    public Collider2D collider2D;
     public VolverAlFuturo volverAlFuturo;
     public MovimientoJugador movimientoJugador;
     public Animator animator;
@@ -17,10 +19,11 @@ public class SaludJugador : MonoBehaviour
     private void Start()
     {
         maxLife = life;
-        objectRenderer = GetComponent<Renderer>(); //Se obtiene el componente Renderer
-        UpdateColor(); //Para que no haya problema alguno lo llamamos.
-        volverAlFuturo = GetComponent<VolverAlFuturo>(); //Obtenemos el script para obtener el efecto de regresion en el tiempo al morir.
-        movimientoJugador = GetComponent<MovimientoJugador>(); //Obtenemos el script para obtener el bool de movimiento.
+        objectRenderer = GetComponent<Renderer>();
+        collider2D = GetComponent<Collider2D>(); // Obtener el componente Collider2D del jugador
+        UpdateColor();
+        volverAlFuturo = GetComponent<VolverAlFuturo>();
+        movimientoJugador = GetComponent<MovimientoJugador>();
         animator = GetComponent<Animator>();
     }
 
@@ -56,6 +59,7 @@ public class SaludJugador : MonoBehaviour
         {
             animator.SetTrigger("IsDeath");
             movimientoJugador.canMove = false;
+            collider2D.enabled = false; // Desactiva el collider para hacer al jugador intangible
             chances--;
             volverAlFuturo.StartRewind();
             life = maxLife;
@@ -66,6 +70,6 @@ public class SaludJugador : MonoBehaviour
             animator.SetTrigger("IsDeath");
             Destroy(gameObject);
         }
-        
+
     }
 }

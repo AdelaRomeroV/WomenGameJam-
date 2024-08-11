@@ -85,7 +85,9 @@ public class VolverAlFuturo : MonoBehaviour
     public void StopRewind()
     {
         animator.SetTrigger("CanMove");
-        movimientoJugador.canMove = true;   
+        movimientoJugador.canMove = true;
+        Collider2D playerCollider = GetComponent<Collider2D>();
+        playerCollider.enabled = true; // Vuelve a activar el collider para que el jugador sea tangible
         isRewinding = false;
         rb.isKinematic = false;
     }

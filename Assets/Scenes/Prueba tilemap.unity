@@ -1577,6 +1577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plataforma
       objectReference: {fileID: 0}
+    - target: {fileID: 2838915777184428143, guid: e346635d122623f47a6ce99e20563aac, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7742420772579001352, guid: e346635d122623f47a6ce99e20563aac, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1684,6 +1688,10 @@ PrefabInstance:
     - target: {fileID: 2838915777184428143, guid: e346635d122623f47a6ce99e20563aac, type: 3}
       propertyPath: m_Name
       value: plataforma
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838915777184428143, guid: e346635d122623f47a6ce99e20563aac, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5518687182350576496, guid: e346635d122623f47a6ce99e20563aac, type: 3}
       propertyPath: m_Size.x
@@ -1814,7 +1822,7 @@ GameObject:
   - component: {fileID: 846193590}
   - component: {fileID: 846193589}
   - component: {fileID: 846193588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26062,6 +26070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plataforma (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2838915777184428143, guid: e346635d122623f47a6ce99e20563aac, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7742420772579001352, guid: e346635d122623f47a6ce99e20563aac, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -26760,6 +26772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plataforma (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2838915777184428143, guid: e346635d122623f47a6ce99e20563aac, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7742420772579001352, guid: e346635d122623f47a6ce99e20563aac, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -27162,7 +27178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6a6245f7db7b3419d37cc2a69eba9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cam1: {fileID: 154172593}
+  Cam1: {fileID: 0}
   Cam2: {fileID: 1616609353}
   maxTime: 0.5
 --- !u!61 &1291715195
@@ -27257,6 +27273,10 @@ PrefabInstance:
     - target: {fileID: 3077313909309979700, guid: 48c49c1ed86ec764b8f5a3914ef3927d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094100608352619133, guid: 48c49c1ed86ec764b8f5a3914ef3927d, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 6739789775553952096, guid: 48c49c1ed86ec764b8f5a3914ef3927d, type: 3}
       propertyPath: m_Name
@@ -28624,7 +28644,7 @@ GameObject:
   - component: {fileID: 1984194570}
   - component: {fileID: 1984194569}
   - component: {fileID: 1984194568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
