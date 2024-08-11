@@ -5,8 +5,8 @@ using UnityEngine;
 public class MovRandowEnemy : MonoBehaviour
 {
     public float speedE;
-    public float range; 
-    public GameObject movementArea; 
+    public float range;
+    public GameObject movementArea;
 
     private Vector2 wayPoint;
     public BoxCollider2D movSprite;
@@ -46,4 +46,5 @@ public class MovRandowEnemy : MonoBehaviour
             Gizmos.DrawWireSphere(transform.position, range);
         }
     }
+
 }
