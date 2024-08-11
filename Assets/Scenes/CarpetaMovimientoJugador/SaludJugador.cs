@@ -11,6 +11,7 @@ public class SaludJugador : MonoBehaviour
     [SerializeField] private Color lowLifeColor = Color.black; // Color cuando la vida es baja, en este caso negro (black)
     public VolverAlFuturo volverAlFuturo;
     public MovimientoJugador movimientoJugador;
+    public Animator animator;
     public float chances; //Oportunidades que se le dan al jugador.
 
     private void Start()
@@ -20,6 +21,7 @@ public class SaludJugador : MonoBehaviour
         UpdateColor(); //Para que no haya problema alguno lo llamamos.
         volverAlFuturo = GetComponent<VolverAlFuturo>(); //Obtenemos el script para obtener el efecto de regresion en el tiempo al morir.
         movimientoJugador = GetComponent<MovimientoJugador>(); //Obtenemos el script para obtener el bool de movimiento.
+        animator = GetComponent<Animator>();
     }
 
     public void TakingDamage(float damage) //Se llama cuando el jugador tenga que recibir daño.
@@ -52,6 +54,7 @@ public class SaludJugador : MonoBehaviour
     {
         if (chances > 0)
         {
+            animator.SetTrigger("IsDeath");
             movimientoJugador.canMove = false;
             chances--;
             volverAlFuturo.StartRewind();
@@ -60,6 +63,7 @@ public class SaludJugador : MonoBehaviour
         }
         else
         {
+            animator.SetTrigger("IsDeath");
             Destroy(gameObject);
         }
         

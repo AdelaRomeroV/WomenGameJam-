@@ -10,6 +10,7 @@ public class VolverAlFuturo : MonoBehaviour
     public float rewindDuration = 5f; // Duración del rewind en segundos
     Rigidbody2D rb;
     List<PuntoDeTiempo> pointsInTime;
+    public Animator animator;
 
     //NOTA : EN EL MOMENTO DE PUSHEO ACTUAL DEL TRABAJO SOLO SE LE ESTA APLICANDO AL JUGADOR LA POSIBILIDAD DE REGRESAR EN EL TIEMPO CUANDO SU VIDA LLEGA A 0 UN TOTAL DE 3 VECES, DESPUES ES DESTRUIDO.
     //NOTA 1: ESTE CODIGO SE ESTA USANDO PARA TRATAR DE LOGRAR LO QUE SE BUSCA PARA LA VERSION DE TOULOUSE COMPRENDAN POFIS :C
@@ -20,6 +21,7 @@ public class VolverAlFuturo : MonoBehaviour
         pointsInTime = new List<PuntoDeTiempo>();
         rb = GetComponent<Rigidbody2D>();
         movimientoJugador = GetComponent<MovimientoJugador>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -61,10 +63,10 @@ public class VolverAlFuturo : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            StartRewind();
-        }
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    StartRewind();
+        //}
     }
 
     public void StartRewind()
@@ -82,6 +84,7 @@ public class VolverAlFuturo : MonoBehaviour
 
     public void StopRewind()
     {
+        animator.SetTrigger("CanMove");
         movimientoJugador.canMove = true;   
         isRewinding = false;
         rb.isKinematic = false;
