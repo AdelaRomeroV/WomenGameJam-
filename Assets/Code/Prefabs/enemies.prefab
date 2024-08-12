@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5248169462032576164}
   - component: {fileID: -3461413400425122556}
-  - component: {fileID: 8269241094934966514}
+  - component: {fileID: 6858370481656619849}
   - component: {fileID: 5107456829751049672}
   - component: {fileID: 824922480788388742}
   - component: {fileID: 7429871823203688024}
@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3892215894643180154}
   m_Layer: 3
   m_Name: enemies
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   speed: 12
   punto1: {x: 300.7, y: -4.480257}
   punto2: {x: 329.1, y: -4.480257}
---- !u!114 &8269241094934966514
+--- !u!114 &6858370481656619849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,11 +62,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9100691173001637953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d12939e2939ea844b40aa811d032b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2be95a7a6dbc6b54e89868d666945049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifes: 5
-  maxLifes: 5
+  health: 5
 --- !u!212 &5107456829751049672
 SpriteRenderer:
   m_ObjectHideFlags: 0
